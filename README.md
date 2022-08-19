@@ -31,7 +31,18 @@ git clone https://github.com/IBA20/django-orm-watching-storage
 ```
 pip install -r requirements.txt
 ```
-3. Запустите файл main.py
+3. В корне проекта создайте файл .env со следующим содержимым:
+```
+SECRET_KEY=secretvalue
+DEBUG=True
+DATABASE_URL=postgres://USER:PASSWORD@HOST:PORT/NAME
+```
+Параметры для подключения к БД - USER, PASSWORD, HOST, PORT, NAME - узнайте в своем личном кабинете Devman. Значеие секретного ключа для локального тестирования можно оставить как есть.
+5. Запустите сервер командой
+```
+python manage.py runserver
+```
+
 
 ## Использование
 
