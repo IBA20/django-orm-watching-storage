@@ -1,19 +1,11 @@
 import os
+import dj-database-url
 from dotenv import load_dotenv
 
 
 load_dotenv()
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'HOST': 'checkpoint.devman.org',
-        'PORT': '5434',
-        'NAME': 'checkpoint',
-        'USER': 'guard',
-        'PASSWORD': 'osim5',
-    }
-}
+DATABASES['default'] = dj_database_url.config(conn_max_age=600)
 
 INSTALLED_APPS = ['datacenter']
 
@@ -23,7 +15,7 @@ DEBUG = os.environ.get('DEBUG', False)
 
 ROOT_URLCONF = 'project.urls'
 
-ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', [])
+ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', ['.localhost', '127.0.0.1', '[::1]'])
 
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
