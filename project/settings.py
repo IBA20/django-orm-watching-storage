@@ -19,11 +19,11 @@ INSTALLED_APPS = ['datacenter']
 
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
-DEBUG = os.environ.get(['DEBUG', False)
+DEBUG = os.environ.get('DEBUG', False)
 
 ROOT_URLCONF = 'project.urls'
 
-ALLOWED_HOSTS = os.environ.get(['ALLOWED_HOSTS', [])
+ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', [])
 
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
