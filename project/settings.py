@@ -5,6 +5,8 @@ env = Env()
 env.read_env()
 
 DATABASES = {'default': env.dj_db_url("DATABASE_URL")}
+# For backward compatibility:
+DATABASES = {'default': {'ENGINE': 'django.db.backends.postgresql_psycopg2'}}
 
 INSTALLED_APPS = ['datacenter']
 
