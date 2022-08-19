@@ -38,6 +38,7 @@ DEBUG=True
 DATABASE_URL=postgres://USER:PASSWORD@HOST:PORT/NAME
 ```
 Параметры для подключения к БД - USER, PASSWORD, HOST, PORT, NAME - узнайте в своем личном кабинете Devman. Значеие секретного ключа для локального тестирования можно оставить как есть.  
+
 5. Запустите сервер командой
 ```
 python manage.py runserver
